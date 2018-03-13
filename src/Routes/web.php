@@ -1,7 +1,7 @@
 <?php
 
 // src/Routes/web.php
-Route::group(['middleware' => ['web']], function () {
+Route::group(['middleware' => ['web', 'admin']], function () {
     Route::get('admin/tags', 'Vadiasov\Tags\Controllers\TagsController@index')->name('admin/tags');
     Route::get('admin/tags/create', 'Vadiasov\Tags\Controllers\TagsController@create')->name('admin/tags/create');
     Route::post('admin/tags/create', 'Vadiasov\Tags\Controllers\TagsController@store');
